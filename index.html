@@ -647,9 +647,20 @@
         };
 
         function startJourney() {
-            bgm.play().catch(e=>console.log("BGM error:",e));
-            goPage('page2');
-        }
+         bgm.volume = 0; // start silent
+         bgm.play().catch(e=>console.log("BGM error:",e));
+         let vol = 0;
+         const fade = setInterval(() => {
+         if (vol < 0.12) {
+            vol += 0.01;
+            bgm.volume = vol;
+          } else {
+            clearInterval(fade);
+                }
+           }, 200);
+         goPage('page2');
+       }
+        
 
         function typeText(elId, text, btnId) {
             const el = document.getElementById(elId);
