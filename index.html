@@ -395,7 +395,6 @@
     <audio id="sfx-wrong" src="Wrong_effect.mp3"></audio>
     <audio id="sfx-tick" src="Tick_effect.mp3"></audio>
     <audio id="sfx-flip" src="Card_flip.mp3"></audio>
-    <audio id="sfx-type" src="Type_effect.mp3"></audio>
     
     <div id="app">
 
@@ -643,32 +642,6 @@
             if(pageId === 'page14') initCardsAnim();
             if(pageId === 'page15') initFinal(); showFinalMessage();
         }
-          function typeText(elId, text, btnId) {
-    const el = document.getElementById(elId);
-    const typeSound = document.getElementById('sfx-type');
-
-    el.innerHTML = '';
-    let i = 0;
-
-    function type() {
-        if(i < text.length) {
-            el.innerHTML += text.charAt(i);
-
-            // 🔊 play sound ONLY for visible characters
-            if(text.charAt(i) !== " ") {
-                typeSound.currentTime = 0;
-                typeSound.play().catch(()=>{});
-            }
-
-            i++;
-            setTimeout(type, 60);
-        } else {
-            setTimeout(() => document.getElementById(btnId).classList.remove('hidden'), 700);
-        }
-    }
-
-    type();
-          }
 
         // --- Page 1 Logic ---
         window.onload = () => {
