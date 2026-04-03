@@ -373,6 +373,18 @@
             opacity: 0;
         }
       }
+         .fade-word {
+            opacity: 0;
+            display: inline-block;
+            margin-right: 5px;
+            transform: translateY(10px);
+            transition: all 0.6s ease;
+}
+
+        .fade-word.show {
+            opacity: 1;
+            transform: translateY(0);
+}
     </style>
  </head>
 <body>
@@ -383,7 +395,8 @@
     <audio id="sfx-wrong" src="Wrong_effect.mp3"></audio>
     <audio id="sfx-tick" src="Tick_effect.mp3"></audio>
     <audio id="sfx-flip" src="Card_flip.mp3"></audio>
-
+    <audio id="sfx-type" src="Type_effect.mp3"></audio>
+    
     <div id="app">
 
         <section id="page1" class="page active">
@@ -411,7 +424,7 @@
         </section>
 
         <section id="page4" class="page">
-            <h2>Do you trust me?</h2>
+            <h2>Do you trust me?😺</h2>
             <button class="btn" onclick="goPage('page6')">YES</button>
             <button class="btn" onclick="goPage('page5')">NO</button>
         </section>
@@ -490,20 +503,20 @@
         </section>
 
         <section id="page-twist1" class="page">
-            <h2 style="font-size: clamp(2rem, 6vw, 3rem);">You ruined my life 😐</h2>
+            <h2 style="font-size: clamp(2rem, 6vw, 3rem);">You have ruined my life 😐</h2>
             <button id="pt1-btn" class="btn hidden" style="margin-top: 40px;" onclick="goPage('page-twist2')">See the list 👇</button>
         </section>
 
         <section id="page-twist2" class="page">
             <h2>How you ruined my life 😮‍💨<br><span style="font-size: 1rem; font-weight: 400;">(in a good way)</span></h2>
             <div class="list-container">
-                <div class="list-item"><span>1️⃣</span> You made normal days feel special</div>
-                <div class="list-item"><span>2️⃣</span> Now everything reminds me of you</div>
+                <div class="list-item"><span>1️⃣</span> You made normal days feel less boring</div>
+                <div class="list-item"><span>2️⃣</span> I thought no one good at dark humour than but that untill i met you</div>
                 <div class="list-item"><span>3️⃣</span> You set my standards too high</div>
-                <div class="list-item"><span>4️⃣</span> I smile for no reason sometimes</div>
-                <div class="list-item"><span>5️⃣</span> You became my favorite distraction</div>
+                <div class="list-item"><span>4️⃣</span> After meeting you i get to know that even orangutan can be bestfriends</div>
+                <div class="list-item"><span>5️⃣</span> You’re my favorite distraction… and biggest headache</div>
             </div>
-            <button id="pt2-btn" class="btn hidden" style="margin-top: 20px;" onclick="goPage('page14')">Continue ❤️</button>
+            <button id="pt2-btn" class="btn hidden" style="margin-top: 20px;" onclick="goPage('page14')">Continue ▶️</button>
         </section>
 
         <section id="page14" class="page">
@@ -521,20 +534,20 @@
 
                 <div class="card-wrapper" onclick="flipCard(this, 1)">
                     <div class="card-inner">
-                        <div class="card-front">🌸</div>
-                        <div class="card-back">Remember this moment? It meant a lot…</div>
+                        <div class="card-front">🧸</div>
+                        <div class="card-back">I hate you just like Mr.bean hate his teddy </div>
                     </div>
                 </div>
                 <div class="card-wrapper" onclick="flipCard(this, 2)">
                     <div class="card-inner">
                         <div class="card-front">✨</div>
-                        <div class="card-back">You don’t realize how special you are…</div>
+                        <div class="card-back">You don’t realize how special you are </div>
                     </div>
                 </div>
                 <div class="card-wrapper" onclick="flipCard(this, 3)">
                     <div class="card-inner">
                         <div class="card-front">🌙</div>
-                        <div class="card-back">Even small things with you feel big…</div>
+                        <div class="card-back">Even small things with you feel good</div>
                     </div>
                 </div>
                 <div class="card-wrapper" onclick="flipCard(this, 4)">
@@ -546,7 +559,7 @@
                 <div class="card-wrapper" onclick="flipCard(this, 5)">
                     <div class="card-inner">
                         <div class="card-front">❤️</div>
-                        <div class="card-back">And this is just the beginning…</div>
+                        <div class="card-back">Our bond just get stronger each day.</div>
                     </div>
                </div>
                <div class="card-wrapper"   onclick="flipCard(this, 6)">
@@ -562,15 +575,20 @@
 
         <section id="page15" class="page">
             <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGV3dzhwNGUwZThhMDlxZjdudHlsNWZyOWllNXc1eGdvem05bHF3aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/j2ksn3l8m1FrhNR6et/giphy.gif" alt="Emotional Sticker" class="sticker">
-            <h2 style="font-size: 1.5rem; margin-bottom: 10px;">I wanted to say this to you...</h2>
-            <p style="font-size: 1.1rem; opacity: 0.8;">Just listen…</p>
+            <h2 style="font-size: 1.5rem; margin-bottom: 10px;">I wanted to say this… don’t get emotional.
+
+            You’re annoying, overdramatic, and a full-time problem… but unfortunately, you’re my problem.
+            I don’t say it, but yeah… you matter.
+            And I can roast you all day, but if anyone else does it, they’re dead.
+            Now relax… no need to cry after reading this.</h2>
+            <p style="font-size: 1.1rem; opacity: 0.8;">Just listen…okay? No choice 😐🔪</p>
             
             <audio id="voice-audio" controls>
                 <source src="My-voice.mp3" type="audio/mp3">
             </audio>
 
             <div id="p15-end" class="hidden" style="width:100%; display:flex; flex-direction:column; align-items:center; margin-top: 20px;">
-                <p>Don’t go yet… I still have something for you</p>
+                <p>Don’t go yet… I still have something for you(you will cry after this😭)</p>
                 <button class="btn" onclick="openVideo()">Open Gift 🎁</button>
             </div>
         </section>
@@ -623,8 +641,34 @@
             if(pageId === 'page-twist1') setTimeout(() => document.getElementById('pt1-btn').classList.remove('hidden'), 1500);
             if(pageId === 'page-twist2') initListAnim();
             if(pageId === 'page14') initCardsAnim();
-            if(pageId === 'page15') initFinal();
+            if(pageId === 'page15') initFinal(); showFinalMessage();
         }
+          function typeText(elId, text, btnId) {
+    const el = document.getElementById(elId);
+    const typeSound = document.getElementById('sfx-type');
+
+    el.innerHTML = '';
+    let i = 0;
+
+    function type() {
+        if(i < text.length) {
+            el.innerHTML += text.charAt(i);
+
+            // 🔊 play sound ONLY for visible characters
+            if(text.charAt(i) !== " ") {
+                typeSound.currentTime = 0;
+                typeSound.play().catch(()=>{});
+            }
+
+            i++;
+            setTimeout(type, 60);
+        } else {
+            setTimeout(() => document.getElementById(btnId).classList.remove('hidden'), 700);
+        }
+    }
+
+    type();
+          }
 
         // --- Page 1 Logic ---
         window.onload = () => {
@@ -803,6 +847,9 @@
                 document.getElementById('pt2-btn').classList.remove('hidden');
             }, items.length * 400 + 1000);
         }
+         document.body.addEventListener('click', () => {
+         document.getElementById('sfx-type').play().catch(()=>{});
+},       { once: true });
 
         // --- Page 14: Cards System ---
         function initCardsAnim() {
@@ -871,6 +918,26 @@
         function closeVideo() {
             document.getElementById('video-overlay').style.display = 'none';
             document.getElementById('rickroll').src = "";
+        }
+
+         function showFinalMessage() {
+            const text = "I wanted to say this to you...";
+            const words = text.split(" ");
+            const el = document.getElementById("final-text");
+
+         el.innerHTML = "";
+
+         words.forEach((word, index) => {
+         const span = document.createElement("span");
+         span.classList.add("fade-word");
+         span.innerText = word;
+
+         el.appendChild(span);
+
+         setTimeout(() => {
+            span.classList.add("show");
+        }, index * 400); // delay between words
+               });
         }
         /* 💥 ADD RIPPLE CODE BELOW */
             document.querySelectorAll('.card-wrapper').forEach(card => {
